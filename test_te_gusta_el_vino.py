@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #Para subrayar el título de nuestro programa
 #definimos una variable 'titulo'
 titulo = "Test sobre tu afición al vino"

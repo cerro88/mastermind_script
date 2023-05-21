@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #esta linea sirve para que el usuario introduzca su edad
 edad = int(input("¿Cual es su edad?: "))
 #esta linea sirve para ue el usuario indique su tipo de carnet

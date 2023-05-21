@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 print("CONVERSOR DE LIBRAS A EUROS")
 GBP=float(input("Libras: "))
 EURO=float(input("Valor del Euro: "))

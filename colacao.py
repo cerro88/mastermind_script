@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 print("Voy a la cocina")
 print("Abro la nevera")
 leche = input("¿Hay leche? (s/n): ")

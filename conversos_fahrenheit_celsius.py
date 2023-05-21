@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 print("CONVERSOR DE GRADOS FAHRENHEIT A GRADOS CELSIUS")
 F=int(input("Grados fahrenheit: "))
 #INT PERMITE RECOGER EL VALOR INTEGER QUE VAMOS A INTRODUCIR
