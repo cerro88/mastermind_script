@@ -1,10 +1,15 @@
 #!/bin/env python3
+#script para practicar if y lidiar con varias condiciones
+#tiene que tener una prueba aritmética
+#y un objeto que más adelante será crucial (punto a entender)
+
 from time import sleep
-#importamos para poder usar sleep
+import random
+num1 = random.randint(1,10)
+num2 = random.randint(1,10)
 
 titulo = "MAZMORRA ALIENÍGENA"
 print(titulo + "\n" + "_" * len(titulo) + "\n")
-#subraya 
 
 print("¡Bienvenido a la mazmorra alienigena!\n"
       " Tendrás que sortear una serie\n"
@@ -25,9 +30,7 @@ if pregunta == "A":
           "la compostura ves que tu celda ha quedado destruida y decides escapar.\n"
           "Al salir de la celda ves una puerta al final del pasillo y una escotilla a la derecha...")
     sleep(5)
-    print("...........")
-
-
+    print("......................................................................................")
 elif pregunta == "B":
     print("Preparate,tu compañero y tú estáis a punto de escarpar de vuestra celda...")
     sleep(5)
@@ -37,7 +40,7 @@ elif pregunta == "B":
           "la compostura veis que vuestra celda ha quedado destruida y decidis escapar.\n"
           "Al salir de la celda, al fondo del pasillo veis una puerta al final y una escotilla a la derecha...")
     sleep(5)
-    print(".........")
+    print("........................................................................................")
 else:
     print("Esta opción no es correcta")
     exit()
@@ -46,28 +49,43 @@ capitulo1 = input("¿Qué camino es el elegido?\n"
                   "B- Escotilla\n"
                   "Decisión: ")
 if capitulo1 == "A" and pregunta == "A":
-    print("Hay un guarda vestido de Prada que se abalanza hacía tí...")
+    print("Hay un guarda vestido de Prada un poco despistado, pero en medio de la salida...")
     solo1 = input("¿Qué haces?\n"
-                  "A- Le propinas tremenda paliza y le quitas el arma\n"
-                  "B- Sales corriendo cual gacela en la sabana...\n"
+                  "A- Te haces el muerto en una esquina\n"
+                  "B- Lo esquivas y sales corriendo cual gacela en la sabana...\n"
                   "Tu decisión: ")
     if solo1 == "A":
-        print("")
-    elif solo1 == "B":
-        print("")
+        print("Al hacerte el muerto y ser tan creible te arrojan a la caldera de cadaveres...¡es tu fin!")
+        sleep(3)
+        print("Tu historía ha terminado")
+        exit()
 
-elif capitulo1 == "B" and pregunta == "A":
-    print("Mueres")
-    exit()
-elif capitulo1 == "A" and pregunta == "B":
-    print("Hay un guarda que ve a tu compañero...y se lo lleva...\n"
-          "En vez de ayudarlo te cayas como perr@ y te escondes...")
-elif pregunta == "B" and capitulo1 == "B":
-    print("Al abrir la escotilla tu compañero es subcionado por una corriente de luz...\n"
-          "Sales corriendo como caballo veloz hacia la puerta y de repente ves como un guarda\n"
-          "atraviesa la puerta y va hacia ti...")
-else:
-    print("Elejiste una opción incorrecta")
-    exit()
-capitulo2 = input("Te entra el pánico...")
-#completar capítulo 1
+elif capitulo1 == "B" and pregunta == "A" and solo1 == "B":
+    print("Después de recorrer cientos de laberintos de tuberias\n"
+          " llegas a un agujero que da al esterior\n"
+          "Allí te encuentras un ponicornio maligno lleno de purpurina y sangre\n"
+          "Te reta a una pregunta...")
+    prueba = num1 * num2
+    respuesta = int(input("Introduce tu respuesta"))
+    if prueba == respuesta:
+        print("¡¡Has ganado un amigo, al ponicornio le gustan las mates!!")
+    elif prueba != respuesta:
+        print("Más te vale correr pringao! El pony se ha enfadado")
+
+    elif capitulo1 == "A" and pregunta == "B":
+        input("Hay un guarda que ve a tu compañero...y se lo lleva...\n"
+              "A- Lo ayudas\n"
+              "B- Te haces el muerto")
+    elif pregunta == "B" and capitulo1 == "B":
+        cuerda = input("Al abrir la escotilla tu compañero es subcionado por una corriente de luz...\n"
+                       "Sales corriendo como caballo veloz hacia la puerta y de repente ves como un guarda\n"
+                       "atraviesa la puerta y va hacia ti...\n"
+                       "Consigues esquivarlo y entras en un laberinto de tuberias, finalmente llegas \n"
+                       "a un agujero que da al esterior.\n"
+                       "ves una cuerda tirada en el suelo...\n"
+                       "A- La coges\n"
+                       "B- La dejas donde esta\n"
+                       "Decisión: ")
+    else:
+        print("Elejiste una opción incorrecta")
+        exit()
