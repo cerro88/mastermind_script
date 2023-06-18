@@ -5,7 +5,7 @@
 
 from time import sleep
 import random
-cuerda = "NO"
+
 
 titulo = "MAZMORRA ALIENÍGENA"
 print(titulo + "\n" + "_" * len(titulo) + "\n")
@@ -14,7 +14,7 @@ print("¡Bienvenido a la mazmorra alienigena!\n"
       "de peligros si quieres salir vivo de la historia...\n")
 sleep(3)
 print("###############################################################################################")
-input("Os han secuestrado unos aliens y os han encerrado en una celda metalizada sin ventanas...\n"
+cuerda = input("Os han secuestrado unos aliens y os han encerrado en una celda metalizada sin ventanas...\n"
       "De repente ois una explosión que os deja aturdid@s... Cuando volvéis  a recuperar\n"
       "la compostura veis que vuestra celda ha quedado destruida y decidis escapar.\n"
       "Al salir de la celda, al fondo del pasillo veis una puerta al final y una escotilla a la derecha...\n"
@@ -32,7 +32,8 @@ if capitulo1 == "A":
           "Tú pasas desapercivido, pero no estás del todo a salvo...\n")
     opcion1 = input("Después de pensarlo dos segundos decides\n"
                     "A- Hacerte el muerto en una esquina hasta que se calme la situación.\n"
-                    "B- Sales corriendo cual gacela en la Sabana sin mirar atrás...")
+                    "B- Sales corriendo cual gacela en la Sabana sin mirar atrás...\n"
+                    "Tu decisión: ")
     if opcion1 == "A":
         print("Te haces tan bien el muerto que te hechan al horno de cadaveres y MUERES!\n"
               "FIN DEL JUEGO!")
@@ -49,6 +50,7 @@ if capitulo1 == "A":
             print("Me has descepcionado! Vete antes de que me coma tus entrañas.")
     else:
         print("Tu opción no es correcta....xao")
+        exit()
 elif capitulo1 == "B":
     print("Vaís hacia la escotilla sin hacer mucho ruido; entráis en una especie de laberintos subterraneos\n"
           "y empezais a dar vueltas de un camino a otro hasta que llegáis a una especie de mazmorra llena de\n"
@@ -57,12 +59,14 @@ elif capitulo1 == "B":
                     "Te das cuenta que va para largo y como te vayas de allí te verán ...\n"
                     "¿Que decides hacer? \n"
                     "A- Te vas como un perro y dejas allí a tu compañero...\n"
-                    "B- Te quedas e intentas sacarlo de allí!")
+                    "B- Te quedas e intentas sacarlo de allí!\n"
+                    "¿Qué haces? ")
     if opcion2 == "A":
         print("Sales corriendo a través de muchos pasadizos hasta llegar a una puerta de salida\n"
-              "que da a un claro en medio del bosque... \n")
+              "que da a un claro en medio del bosque... \n"
+              "Allí hay un pony del infierno que te ofrece una pista a cambio de un simple juego.")
         numero_pony = random.randint(1, 10)
-        print("Adivina el número!")
+        print("Si adivinas el número que estoy pensando, quizás te diga algo de utilidad.SISI")
         numero_elegido = int(input("Elige un número del uno al diez: "))
         if numero_pony == numero_elegido:
             print("Has acertado! Te diré que si llevas una cuerda encima te podrás escapar...VETE!")
@@ -82,14 +86,16 @@ else:
 capitulo2 = input("Te vas del claro del bosque tan rápido que te pierdes entre los árboles y decides\n"
                   "descansar un rato...ves una pequeña cueva a la izquierda y un árbol donde podrías trepar\n"
                   "¿qué decides hacer?\n"
-                  "A -Ir a descansar a la cueva...seguro que estás a salvo"
-                  "B- Trepar al árbol y descansar en una rama...lo único que podría pasarte es que te caigas")
+                  "A -Ir a descansar a la cueva...seguro que estás a salvo\n"
+                  "B- Trepar al árbol y descansar en una rama...lo único que podría pasarte es que te caigas\n"
+                  "Decisión: ")
 if capitulo2 == "A":
     print("Entras a la cueva y encuentras señales de vida dentro...pero como no hay nadie aprovechas el\n"
           "colchón de paja que hay y te tiras a descansar...\n"
           "Cuando estas profundamente dormido oyes como una familia de monstruos te esta oliendo de arriba a abajo\n"
           "Ya no tienes escapatoria....van a comerte!!! \n"
           "FIN DEL JUEGO VAGO, TODO POR NO TREPAR!!")
+    exit()
 elif capitulo2 == "B":
     print("Trepas al árbol y te acomodas en la rama más grande. Consigues hacer un siestón que te revive la energia\n"
           "Una vez has decansado, procedes a observar los alrrededores y consigues avistar una puerta a lo lejos\n"
@@ -97,6 +103,7 @@ elif capitulo2 == "B":
           "Te armas de cojones y bajas para ir hacia allí")
 else:
     print("Estas empanad@! ADIOS!")
+    exit()
 
 capitulo3 = input("Al fin llegas a la puerta, y ves que esta cerrada con mil cadenas y además tiene electricidad,\n"
                   "si trepas la puerta lo más probables es que te quedes pegado...\n"
