@@ -3,15 +3,15 @@
 from random import randint
 
 #se inicia una puntuación inicial 
-vida_picachu = 80
+vida_pikachu = 80
 vida_squiertle = 90
 
 # mientras la vida de ambos sea mayor a 0 se seguirá ejecutando
 
-while vida_picachu > 0 and vida_squiertle > 0:
+while vida_pikachu > 0 and vida_squiertle > 0:
     #turnos de combate
 
-    print("Turno picachu")
+    print("Turno pikachu")
 
     # 
     ataque_pikachu = randint(1,2)
@@ -19,9 +19,9 @@ while vida_picachu > 0 and vida_squiertle > 0:
         print("Pikachu ataca con Bola Voltio")
         vida_squiertle -= 10
     else:
-        print("Picachu ataca con Onda Tueno")
+        print("Pikachu ataca con Onda Tueno")
         vida_squiertle -= 11
-    print("La vida de Picachu es: {}, la vida de squiertle es {}".format("#" * vida_picachu,"#" * vida_squiertle))
+    print("La vida de Pikachu es: {}, la vida de squiertle es {}".format("#" * vida_pikachu,"#" * vida_squiertle))
 
     input("Enter para continuar...\n\n")
 
@@ -32,16 +32,16 @@ while vida_picachu > 0 and vida_squiertle > 0:
         ataque_squiertle = input("¿Que ataque deseas realizar? [P]lacaje, Pistola [A]gua, [B]urbuja: ")
 
     if ataque_squiertle == "P":
-        vida_picachu -= 10
+        vida_pikachu -= 10
     elif ataque_squiertle == "A":
-        vida_picachu -= 12
+        vida_pikachu -= 12
     elif ataque_squiertle == "B":
-        vida_picachu -= 9
+        vida_pikachu -= 9
 
     print("La vida de Picachu es: {}, la vida de squiertle es {}".format("#" * vida_picachu,"#" * vida_squiertle))
     input("Enter para continuar...\n\n")
 
-    if vida_picachu > vida_squiertle:
+    if vida_pikachu > vida_squiertle:
         print("Pikachu gana!")
     else:
         print("Squiertle gana!")
