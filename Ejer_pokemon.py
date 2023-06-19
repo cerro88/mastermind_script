@@ -38,7 +38,7 @@ while vida_pikachu > 0 and vida_squiertle > 0:
     elif ataque_squiertle == "B":
         vida_pikachu -= 9
 
-    print("La vida de Picachu es: {}, la vida de squiertle es {}".format("#" * vida_picachu,"#" * vida_squiertle))
+    print("La vida de Picachu es: {}, la vida de squiertle es {}".format("#" * vida_pikachu,"#" * vida_squiertle))
     input("Enter para continuar...\n\n")
 
     if vida_pikachu > vida_squiertle:
