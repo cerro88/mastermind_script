@@ -32,3 +32,5 @@ if opcion == "F":
 else:
     print("Los datos introducidos no son correctos.")
     exit()
+
+    #los cálculos se pueden mejorar
