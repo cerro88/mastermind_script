@@ -4,7 +4,7 @@
 #creamos una lista con las vocales para poder comprobar si estan en la frase
 vocales = ["a", "e", "i", "o", "u"]
 #se crea la variable frase
-frase = "hola, estoy aprendiendo phyton"
+frase = "hola,  estoy aprendiendo phyton"
 #se inicia el contador a 0
 vocales_encontradas = 0
 #por cada letra dentro de la frase
